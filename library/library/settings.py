@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'authors',
     'rest_framework',
+    'authapp',
 ]
 
 MIDDLEWARE = [
@@ -114,6 +115,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+#AUTH_USER_MODEL = 'authapp.User'
 
 
 # Static files (CSS, JavaScript, Images)
