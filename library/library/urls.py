@@ -17,6 +17,10 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from authors.views import AuthorModelViewSet
+from django.contrib import admin
+from TODO.views import todo
+from TODO.views import category
+from TODO.views import redirect_view
 
 router = DefaultRouter()
 router.register('authors', AuthorModelViewSet)
@@ -25,4 +29,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
     path('api/', include(router.urls)),
+    path('todo/', todo, name="TodoList"),
+    path('category/', category, name="Category")
+
 ]
