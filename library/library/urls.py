@@ -31,7 +31,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
     path('api/', include(router.urls)),
-    path('todo/', include(router.urls)),
+    path('api-todo/', include(router.urls)),
     # path('autor/<str:param>/', AuthorModelViewSet.as_view({'get': 'list'})),
 
 ]

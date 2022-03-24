@@ -1,5 +1,5 @@
 from rest_framework.serializers import HyperlinkedModelSerializer
-from models import TodoList
+from .models import TodoList
 
 
 class TodoModelSerializer(HyperlinkedModelSerializer):
