@@ -18,6 +18,7 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from authors.views import AuthorModelViewSet, BookModelViewSet, BiographyModelViewSet, ArticleModelViewSet, AuthorApiView
 from todo.views import TodoModelViewSet
+from rest_framework.authtoken import views
 
 router = DefaultRouter()
 router.register('authors', AuthorModelViewSet)
@@ -33,5 +34,5 @@ urlpatterns = [
     path('api/', include(router.urls)),
     path('api-todo/', include(router.urls)),
     # path('autor/<str:param>/', AuthorModelViewSet.as_view({'get': 'list'})),
-
+    path('api-token-auth/', views.obtain_auth_token)
 ]
